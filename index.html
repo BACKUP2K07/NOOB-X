@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NOOB-X BOT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#000000" />
+  <style>
+    body {
+      background-color: black;
+      font-family: 'Courier New', monospace;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .emoji {
+      font-size: 100px;
+      animation: bounce 1s infinite alternate;
+      text-shadow: 0 0 20px green;
+      margin-bottom: 10px;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to   { transform: translateY(-10px); }
+    }
+
+    .title {
+      font-size: 60px;
+      font-weight: bold;
+      text-shadow: 0 0 20px green;
+      margin: 10px 0;
+      transition: 0.5s ease;
+    }
+
+    .status {
+      color: lime;
+      font-size: 18px;
+      margin: 20px 0;
+    }
+
+    .welcome {
+      font-size: 20px;
+      color: cyan;
+      text-shadow: 0 0 10px cyan;
+      margin-bottom: 30px;
+    }
+
+    .info-box {
+      border: 2px solid deeppink;
+      display: inline-block;
+      padding: 20px 30px;
+      color: cyan;
+      font-size: 18px;
+      text-shadow: 0 0 10px cyan;
+      margin-top: 40px;
+    }
+
+    .info-box p {
+      margin: 10px 0;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #00ffff;
+      text-shadow: 0 0 10px #ff00ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="emoji">🤖</div>
+
+  <div id="title" class="title" style="color:red;">NOOB-X</div>
+
+  <div class="status">🟢 Bot Status: Online</div>
+
+  <div class="welcome">Welcome to NOOB-X Bot Project</div>
+
+  <div class="info-box">
+    <p>🤖 Bot Name: <span class="highlight">NOOB-X</span></p>
+    <p>🛠️ Version: <span class="highlight">2K07</span></p>
+    <p>👨‍💻 Developer: <span class="highlight">MOHAMMAD ALAMIN</span></p>
+  </div>
+
+  <script>
+    const title = document.getElementById("title");
+    const colors = ["red", "blue", "green"];
+    const shadows = ["0 0 25px red", "0 0 25px green", "0 0 25px blue"];
+    let index = 0;
+
+    setInterval(() => {
+      title.style.color = colors[index];
+      title.style.textShadow = shadows[index];
+      index = (index + 1) % colors.length;
+    }, 200);
+  </script>
+</body>
+</html>
